@@ -21,6 +21,8 @@ hs_err_pid*
 /bin/
 #Ignore SpringBeans
 .springBeans
+#Ignore testNG output
+test-output/
 #Common
 *log/
 
