@@ -1,0 +1,2 @@
+- It's always a good practice to make your code right and then make it fast. 
+  In concurrent programming it's even more significant - small performance gain may degrade by the risk that program will fail in the field
