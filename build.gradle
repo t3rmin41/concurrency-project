@@ -1,0 +1,50 @@
+buildscript {
+    ext {
+        junitVersion = '4.12'
+    }
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'java'
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+    }
+    test {
+        java {
+            srcDir 'src/test/java'
+        }
+    }
+}
+
+jar {
+    baseName = 'concurrency.app'
+    version = '0.0.1'
+    manifest {
+        attributes(
+            'Main-Class': 'com.concurrency.project.app.Main'
+        )
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+configurations.all {
+   exclude group: "commons-logging", module: "commons-logging"
+}
+
+dependencies {
+    // testing
+    testCompile("junit:junit:${junitVersion}")
+}
