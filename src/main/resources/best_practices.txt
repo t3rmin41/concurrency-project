@@ -14,3 +14,5 @@
 - Mutex : mutual exclusion lock
 
 - Reentrant lock - lock-per-thread, not per-invocation. If the thread acquired reentrant lock, the same thread doesn't reacquire the same lock
+
+- Hit counter: read-modify-write ; lazy initialization : check-then-act
