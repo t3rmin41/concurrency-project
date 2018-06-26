@@ -1,2 +1,16 @@
 - It's always a good practice to make your code right and then make it fast. 
-  In concurrent programming it's even more significant - small performance gain may degrade by the risk that program will fail in the field
+  In concurrent programming it's even more significant - small performance gain may degrade 
+  by the risk that program will fail in the field
+  
+--- Race condition : unlucky timing between threads while reading and modifying object state (field) [check-then-act and read-modify-write]
+  
+- A class is thread-safe if it behaves correctly when accessed from multiple threads 
+  regardless the scheduling, interleaving and without additional synchronization on calling code part
+  
+- Stateless objects are always thread-safe
+
+- Lazy initialization (return new Object() if field null else return field) is very vulnerable to race condition
+
+- Mutex : mutual exclusion lock
+
+- Reentrant lock - lock-per-thread, not per-invocation. If the thread acquired reentrant lock, the same thread doesn't reacquire the same lock
