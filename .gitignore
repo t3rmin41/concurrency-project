@@ -26,3 +26,6 @@ test-output/
 #Common
 *log/
 
+#IntelliJ
+.idea/
+out/
