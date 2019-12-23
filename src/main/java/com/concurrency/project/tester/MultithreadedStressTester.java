@@ -19,7 +19,6 @@ public class MultithreadedStressTester {
   private final int threadCount;
   private final int iterationCount;
 
-
   public MultithreadedStressTester(int iterationCount) {
       this(DEFAULT_THREAD_COUNT, iterationCount);
   }
